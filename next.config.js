@@ -3,7 +3,6 @@ const { PHASE_DEVELOPMENT_SERVER } = require('next/constants');
 module.exports = (phase) => {
   if (phase === PHASE_DEVELOPMENT_SERVER) {
     return {
-      output: 'export',
       env: {
         emailFrom,
         emailFromPass,
@@ -14,7 +13,6 @@ module.exports = (phase) => {
   }
 
   return {
-    output: 'export',
     reactStrictMode: true,
   };
 };
